@@ -1,7 +1,7 @@
 {
   "name": "shanzhike-backend",
   "version": "1.0.0",
-  "description": "山之课 Mentorbook 后端服务",
+  "description": "山之课 AI 后端服务",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",

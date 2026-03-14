@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <header className="container max-w-1200 mx-auto p-4 border-b">
-        <h1>山之课 Mentorbook</h1>
+        <h1>山之课 AI</h1>
       </header>
       <main>
         <ApiCourseModule />
