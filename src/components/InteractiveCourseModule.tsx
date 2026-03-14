@@ -1,0 +1,97 @@
+import React, { useState } from 'react'
+
+const InteractiveCourseModule: React.FC = () => {
+  const [activeChapter, setActiveChapter] = useState(2)
+  const [activeSection, setActiveSection] = useState(1)
+  
+  const chapters = [
+    { id: 1, title: '01. 神经编码', sections: [] },
+    { id: 2, title: '02. 生物物理模型', sections: [
+      { id: 1, title: 'Hodgkin-Huxley 模型' },
+      { id: 2, title: '电缆理论' },
+      { id: 3, title: '分区模型' }
+    ]},
+    { id: 3, title: '03. 突触可塑性', sections: [] },
+    { id: 4, title: '04. 网络动力学', sections: [] }
+  ]
+  
+  const handleChapterClick = (chapterId: number) => {
+    setActiveChapter(chapterId)
+    setActiveSection(1)
+  }
+  
+  const handleSectionClick = (sectionId: number) => {
+    setActiveSection(sectionId)
+  }
+  
+  return (
+    <div className="container max-w-1200 mx-auto p-4">
+      {/* 课程标题区 */}
+      <div className="module-title mb-4">
+        <h2>计算神经科学</h2>
+        <div className="progress-bar">
+          <div className="progress" style={{ width: '45%' }}></div>
+          <span className="progress-text">45%</span>
+        </div>
+      </div>
+      {/* 核心分栏 */}
+      <div className="flex flex-col md:flex-row gap-4">
+        {/* 左侧目录 */}
+        <div className="catalog w-full md:w-1/4 sticky top-4">
+          <ul>
+            {chapters.map(chapter => (
+              <li key={chapter.id}>
+                <div 
+                  className={`catalog-item ${activeChapter === chapter.id ? 'active' : ''}`}
+                  onClick={() => handleChapterClick(chapter.id)}
+                >
+                  {chapter.title}
+                </div>
+                {chapter.sections.length > 0 && activeChapter === chapter.id && (
+                  <ul className="catalog-sub">
+                    {chapter.sections.map(section => (
+                      <li 
+                        key={section.id}
+                        className={`catalog-sub-item ${activeSection === section.id ? 'active' : ''}`}
+                        onClick={() => handleSectionClick(section.id)}
+                      >
+                        {section.title}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+        {/* 中间内容区 */}
+        <div className="content w-full md:w-2/3">
+          <div className="content-card p-6 border rounded">
+            <h3>课时 2.{activeSection} {chapters.find(c => c.id === activeChapter)?.sections.find(s => s.id === activeSection)?.title}</h3>
+            <p className="content-text mt-4">
+              电缆理论描述了电信号如何沿着神经元突起传播。神经元被建模为具有 <span className="highlight">被动电学特性</span> 的圆柱体，其特征由膜电阻和电容决定。
+            </p>
+            <p className="content-text mt-2">
+              控制信号传播的基本方程是 <span className="highlight">电缆方程</span>，它将电压变化与距离和时间联系起来。这个数学框架让我们能够理解 <span className="highlight">突触输入如何被整合</span>，从树突传递到胞体。
+            </p>
+            <p className="content-text mt-2">
+              关键参数包括 长度常数 (λ) 和时间常数 (τ)，它们决定了信号能在神经元内传播多远和多快。
+            </p>
+            {/* 公式块 */}
+            <div className="formula-block mt-4 p-4 bg-f1f3f5 rounded">
+              $∇²V = (λ)⁻²V + τ ∂V/∂t$
+            </div>
+          </div>
+        </div>
+        {/* 右侧功能区 */}
+        <div className="function w-full md:w-1/5 sticky top-4">
+          <button className="func-btn w-full mb-2">提问</button>
+          <button className="func-btn w-full mb-2">笔记</button>
+          <button className="func-btn w-full">高亮</button>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default InteractiveCourseModule

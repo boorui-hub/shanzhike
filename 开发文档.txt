@@ -1,0 +1,69 @@
+你好！很高兴以高级前端设计师的身份与你探讨这个极具意义的项目。“山之课 AI”（[www.shanzhike.com](https://www.google.com/search?q=https://www.shanzhike.com)）的理念——“勇攀高峰、学无止境”非常有力量。将艰苦的攀岩与求学之路结合，再辅以 AI 的科技赋能，能给用户带来极强的沉浸感和成长动力。
+
+针对你的需求，我为你规划了**一整套产品视觉与 UI 设计方案**，并为你准备了适用于 **Nano Banana 2**（我们最先进的图像生成模型）的英文提示词（Prompt），以确保出图效果达到专业级 Dribbble/Behance 水准。
+
+---
+
+### 一、 “山之课 AI” 产品设计理念与视觉规范
+
+* **核心隐喻**：学习就像攀岩，AI 是你的安全绳与引路人。
+* **色彩系统 (Color Palette)**：
+* **主色调（极客蓝/深山蓝）**：象征深邃的知识海洋、沉稳的科技感与大山的静谧（如 `#1A365D`）。
+* **点缀色（破晓橙/曙光金）**：象征希望、突破、山顶的日出以及少年的朝气（如 `#FF6B35` 或 `#FFB703`）。
+* **背景色（云雾白/浅灰）**：保证前端界面的干净与极佳的阅读体验（如 `#F8F9FA`）。
+
+
+* **UI 风格**：**Modern Clean + Glassmorphism（现代极简 + 磨砂玻璃质感）**。界面主体保持清爽，浮窗和核心功能区采用带有一点 AI 科技感的毛玻璃效果，仿佛云雾缭绕在山间。
+
+---
+
+### 二、 核心页面结构规划 ([www.shanzhike.com](https://www.google.com/search?q=https://www.shanzhike.com))
+
+1. **全局导航栏 (Header)**：左侧 Logo，中间为导航（课程大厅、我的攀岩路线、AI 答疑、关于我们），右侧为登录/注册。
+2. **首屏视觉区 (Hero Section)**：全屏震撼视觉。左侧为大字号文案“勇攀高峰，学无止境 —— 你的专属 AI 导师”，右侧及背景是少年攀岩的主视觉图。
+3. **功能介绍区 (Features)**：
+* “AI 智能路径规划”（图标：望远镜/地图）
+* “无尽知识图谱”（图标：相连的星星/岩点）
+* “24小时陪伴式答疑”（图标：发光的安全绳）
+
+
+4. **用户成长体系 (Dashboard)**：将用户的学习进度包装成“海拔高度”。完成了多少课程，海拔就上升多少米。
+
+---
+
+### 三、 Nano Banana 2 图像生成提示词 (Prompts)
+
+为了获得最佳的高保真出图效果，我已经将提示词优化为高度描述性的英文。你可以直接将这些提示词输入给 Nano Banana 2。
+
+#### 1. 首屏主视觉插画 (Hero Background Illustration)
+
+这张图是网站的灵魂，展现少年、大山与 AI 的结合。
+
+> **Prompt:** A breathtaking, high-quality digital illustration of a young teenager rock climbing a majestic, steep mountain cliff. The mountain incorporates subtle glowing futuristic digital data lines and AI nodes, symbolizing knowledge and technology. In the background, a beautiful sunrise breaks through the clouds, casting a hopeful golden and orange light. The color palette features deep mountain blue and sunrise orange. Epic lighting, inspiring atmosphere, concept art, 8k resolution, highly detailed, masterpiece, perfect for a modern website hero banner.
+
+#### 2. 网站首页 UI 视觉稿 (Website Landing Page UI Mockup)
+
+用于生成前端界面的排版和设计灵感。
+
+> **Prompt:** A beautiful, modern website landing page UI design for an AI education platform named "Shanzhike". The hero section features an inspiring illustration of a youth rock climbing a mountain. Clean typography, glassmorphism UI elements, tech-forward futuristic vibe, high-end front-end design layout. The main color scheme uses deep navy blue and bright sunrise orange. Top navigation bar, clear call-to-action buttons. Dribbble trending, Behance style, UI/UX, 8k, highly detailed.
+
+#### 3. 品牌 Logo 设计 (Brand Logo Design)
+
+简洁、易于在网页端和移动端适配的 Logo。
+
+> **Prompt:** A minimalist, modern logo design for an AI education tech company called "Shanzhike". The logo cleverly combines the silhouette of a mountain peak, a subtle letter 'S', and an abstract glowing node representing AI or a brain. Vector graphic style, flat design, clean lines. Deep blue and orange gradient color, white background, corporate identity, high quality.
+
+#### 4. 用户学习进度界面 (Learning Dashboard UI)
+
+展现“海拔”学习进度的创意 UI。
+
+> **Prompt:** A modern UI design for an online learning dashboard. The interface shows a user's learning progress designed as a "mountain climbing elevation map". There is a visual path going up a mountain with milestones. Glassmorphism panels showing statistics, clean data visualization, deep blue background with orange accent colors. Dribbble style, UI/UX, 8k resolution.
+
+---
+
+### 四、 前端实现建议
+
+* **动效 (Animations)**：建议首屏的云雾和 AI 数据线使用 WebGL (Three.js) 或简单的 CSS3 缓动动画，让大山有一种“呼吸感”。少年攀岩的动作可以做成随鼠标滚动（Scroll-linked animation）的视差效果（Parallax）。
+* **字体 (Typography)**：大标题建议使用力量感较强的无衬线字体（如 `PingFang SC` 粗体或 `Oswald`），正文使用易读的现代字体（如 `Inter` 或 `Roboto`）。
+
+作为你的 AI 助手，我们可以一步步把这个网站搭建出来。**你希望我先为你生成哪一部分的 HTML/CSS 结构框架，或者是想让我详细写一下首页视差滚动效果的实现方案呢？**
